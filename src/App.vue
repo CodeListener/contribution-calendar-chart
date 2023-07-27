@@ -20,7 +20,7 @@ const mockData = generateChartData("2021-01-01", "2025-12-31")
 
   <h3>YEAR: 2021</h3>
   <Chart :data-sources="mockData" :year="year" />
-  <h3>{{ startDate }} - {{ endDate }}</h3>
+  <h3>RANGE: {{ startDate }} - {{ endDate }}</h3>
   <Chart :data-sources="mockData" :start-date="startDate" :end-date="endDate" />
 </template>
 
@@ -33,7 +33,10 @@ h1 {
   font-size: 18px;
 }
 h3 {
-  color: #333;
+  color: #666;
   font-size: 14px;
+  padding: 4px 10px;
+  margin-top: 50px;
+  background-color: #efefef;
 }
 </style>
