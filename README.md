@@ -175,7 +175,7 @@ export function generateChartData(...args: any): Result {
 2. 开始日期:startDate ，结束日期: endDate
 3. 默认不传已当天为结束日期生成近期一年的日期集合
 
-注意第 3 点，默认情况，我们不传参数希望一今天为最后一天，渲染出近期的一年日期（github 默认显示的就是这样），所以我们已`当天`为`结束日期`, `开始日期`我们通过实现一个`getStartDate`来获取：
+注意第 3 点，默认情况，我们不传参数希望今天为最后一天，渲染出近期的一年日期（github 默认显示的就是这样），所以我们已`当天`为`结束日期`, `开始日期`我们通过实现一个`getStartDate`来获取：
 
 ```typescript
 // 根据结束日期来反推出开始日期
@@ -193,14 +193,15 @@ function getStartDate(end: number | string | Date) {
 }
 ```
 
-这样我们就初步完成核心实现了
+这样我们就完成核心实现了，只需要将生成的数据遍历出来，这块内容具体我提交一个完整的仓库，方便掘友查看
+
+**[Github 仓库](https://github.com/CodeListener/contribution-calendar-chart)**
 
 ## 最终实现
-最后我们在完善一下阶梯颜色及其数据展示，由于这块相对简单，所以就不讲解了，直接附上最终效果及其相关代码
+![demo](./demo.png)
 
-
-## 总结
-
-## 个人实现
-
+以下是个人站点通过Keep运动数据实现的UI，嘿嘿
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca9b0aeb3d3f41508c73e201f0c714a5~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
